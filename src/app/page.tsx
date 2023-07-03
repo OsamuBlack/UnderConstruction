@@ -33,7 +33,7 @@ export default function Home() {
   }, [loads]);
 
   return (
-    <main className="flex flex-col items-center p-16 h-screen relative ">
+    <main className="flex flex-col items-center p-16 relative min-h-screen">
       <picture className="peer">
         <source media="(max-width: 600px)" srcSet={mobileImage} />
         <source media="(min-width: 601px)" srcSet={desktopImage} />
