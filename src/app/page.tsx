@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Logo from "public/logo.png";
 import { useEffect, useState } from "react";
+import { BsFillPhoneFill } from "react-icons/bs";
+import { AiFillMail } from "react-icons/ai";
 
 export default function Home() {
   const [mobileImage, setMobileImage] = useState(
@@ -47,9 +49,7 @@ export default function Home() {
       <div className="text-center  peer-hover:opacity-0 p-8 lg:px-32 z-50 text-slate-900 rounded-xl bg-white bg-opacity-60 backdrop-blur-sm border-slate-200 border border-opacity-75 transition-all">
         <Image src={Logo} alt="SNA LOGO" width={400} />
         <h1 className="text-4xl font-bold mt-8">Site under construction</h1>
-        <p className="text-2xl mt-4 font-mono">
-          Wait for the surprise.
-        </p>
+        <p className="text-2xl mt-4 font-mono">Wait for the surprise.</p>
         <p>View these images while you are at it.</p>
         <button
           onClick={handleClick}
@@ -57,6 +57,16 @@ export default function Home() {
         >
           Load Another Image
         </button>
+        <div className="flex flex-wrap pt-8 text-xl font-semibold text-primary ">
+          <div className="">
+            <BsFillPhoneFill className="inline mr-2" />
+            <a className="underline font-mono" href="tel:+92412424051">(+92) 41-2424051</a>
+          </div>
+          <div className="ml-8">
+            <AiFillMail className="inline mr-2" />
+            <a className="underline font-mono" href="mailto:info@snaexport.com">info@snaexport.com</a>
+          </div>
+        </div>
       </div>
     </main>
   );
